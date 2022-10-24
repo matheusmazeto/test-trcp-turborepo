@@ -9,11 +9,10 @@ export const createContext = (
   const res = opts?.res
 
   return {
+    prisma,
     req,
     res,
-    prisma,
   }
 }
 
-type Context = trpc.inferAsyncReturnType<typeof createContext>
-export const createRouter = () => trpc.router<Context>()
+export type Context = trpc.inferAsyncReturnType<typeof createContext>

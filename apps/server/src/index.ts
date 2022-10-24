@@ -1,5 +1,5 @@
 import { createServer } from './server'
-export { AppRouter } from './router'
+export type { AppRouter } from './router'
 
 async function main() {
   const { app } = createServer()

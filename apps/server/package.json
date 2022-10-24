@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "db:gen": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.5.0",
-    "@trpc/server": "^9.27.4",
+    "@trpc/server": "^10.0.0-rc.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
