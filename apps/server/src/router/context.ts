@@ -1,19 +1,19 @@
-import * as trpc from "@trpc/server";
-import * as trpcExpress from "@trpc/server/adapters/express";
-import { prisma } from "../db/prisma";
+import * as trpc from '@trpc/server'
+import * as trpcExpress from '@trpc/server/adapters/express'
+import { prisma } from '../db/prisma'
 
 export const createContext = (
-    opts?: trpcExpress.CreateExpressContextOptions
+  opts?: trpcExpress.CreateExpressContextOptions,
 ) => {
-    const req = opts?.req;
-    const res = opts?.res;
+  const req = opts?.req
+  const res = opts?.res
 
-    return {
-        req,
-        res,
-        prisma,
-    };
-};
+  return {
+    req,
+    res,
+    prisma,
+  }
+}
 
-type Context = trpc.inferAsyncReturnType<typeof createContext>;
-export const createRouter = () => trpc.router<Context>();
+type Context = trpc.inferAsyncReturnType<typeof createContext>
+export const createRouter = () => trpc.router<Context>()
