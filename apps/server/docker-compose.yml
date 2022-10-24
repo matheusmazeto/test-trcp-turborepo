@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  mvp_second_brain:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=scott
+      - POSTGRES_PASSWORD=tiger
+      - POSTGRES_DB=mvp_second_brain
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
